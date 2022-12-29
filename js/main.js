@@ -1,5 +1,4 @@
 $(document).ready(() => {
-    let url = window.location.href;
     let splitted = (window.location.href).split('#');
 
     if([undefined, "", null].includes(splitted[1]))
@@ -9,13 +8,7 @@ $(document).ready(() => {
 });
 
 const main = document.querySelector("main");
-var big_wrapper;
-
-function declare(){
-    big_wrapper = document.querySelector(".big-wrapper");
-}
-
-declare();
+var big_wrapper = document.querySelector(".big-wrapper");
 
 let dark = false;
 
@@ -41,8 +34,7 @@ function toggleAnimation(location = "home"){
         document.body.classList.remove("stop-scrolling");
         big_wrapper.remove();
         clone.classList.remove("copy");
-
-        declare();
+        big_wrapper = document.querySelector(".big-wrapper");
     });
 }
 
