@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optik Center Davoli</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2e529e">
+    <meta name="theme-color" content="#2e529e">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <main>
+        <div class="big-wrapper light">
+            <img src="img/shape.webp" alt="Shape" class="shape">
+
+            <header>
+                <div class="container">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="Logo">
+                        <h3>Optik Center Davoli</h3>
+                    </div>
+
+                    <div class="links">
+                        <ul>
+                            <li><a onclick="toggleAnimation()">Home</a></li>
+                            <li><a onclick="toggleAnimation('brand')">Brand</a></li>
+                            <li><a onclick="toggleAnimation('contact')">Contatti</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="overlay"></div>
+    
+                    <div class="hamburger-menu" onclick="activeMenu()">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="showcase-area" id="showcase">
+            </div>
+
+            <div class="bottom-area"></div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
