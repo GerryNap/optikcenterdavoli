@@ -1,10 +1,10 @@
 $(document).ready(() => {
-    let splitted = (window.location.href).split('#');
+    let splitted = ((window.location.href).split('#'))[1];
 
-    if([undefined, "", null].includes(splitted[1]))
+    if([undefined, "", null].includes(splitted))
         $(".showcase-area").load("pages/home.html");
     else
-        $(".showcase-area").load("pages/" + splitted[1] + ".html");
+        $(".showcase-area").load("pages/" + splitted + ".html");
 });
 
 const main = document.querySelector("main");
@@ -13,6 +13,10 @@ var big_wrapper = document.querySelector(".big-wrapper");
 let dark = false;
 
 function toggleAnimation(location = "home"){
+    let splitted = ((window.location.href).split('#'))[1];
+    if([undefined, "", null].includes(splitted) && location === "home")
+        return;
+    
     window.location.replace("#"+location);
     activeMenu();
     dark = !dark;
