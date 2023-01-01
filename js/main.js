@@ -12,12 +12,8 @@ var big_wrapper = document.querySelector(".big-wrapper");
 
 let dark = false;
 
-function toggleAnimation(location = "home"){
-    let splitted = ((window.location.href).split('#'))[1];
-    if([undefined, "", null].includes(splitted) && location === "home")
-        return;
+function toggleAnimation(location){
     
-    window.location.replace("#"+location);
     activeMenu();
     dark = !dark;
     let clone = big_wrapper.cloneNode(true);
