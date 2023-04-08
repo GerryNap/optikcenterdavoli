@@ -11,10 +11,13 @@ const main = document.querySelector("main");
 var big_wrapper = document.querySelector(".big-wrapper");
 
 let dark = false;
+let active = false;
 
 function toggleAnimation(location){
-    
-    activeMenu();
+    if(active){
+        activeMenu();
+        active = false;
+    }
     dark = !dark;
     let clone = big_wrapper.cloneNode(true);
     if(dark){
@@ -40,4 +43,5 @@ function toggleAnimation(location){
 
 function activeMenu(){
     big_wrapper.classList.toggle("active");
+    active = !active;
 }
