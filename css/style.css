@@ -9,18 +9,7 @@
   src: url(Poppins/Poppins-Bold.ttf);
   font-weight: 700;
 }
-
-.light {
-  --mainColor: #019ee1;
-  --hoverColor: #2e529e;
-  --backgroundColor: #f1f8fc;
-  --darkOne: #312f3a;
-  --darkTwo: #45424b;
-  --lightOne: #919191;
-  --lightTwo: #aaa;
-}
-
-.dark {
+:root {
   --mainColor: #019ee1;
   --hoverColor: #2e529e;
   --backgroundColor: #192e3a;
@@ -40,11 +29,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-}
-
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
 }
 
 img {
@@ -120,13 +104,14 @@ header .container {
   color: var(--lightTwo);
   margin-left: 4.5rem;
   display: inline-block;
-  transition: 0.3s;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .links a:hover {
   color: var(--hoverColor);
-  transform: scale(1.05);
+  transition: 0.3s;
+  transform: scale(1.1);
 }
 
 .btn {
@@ -203,6 +188,24 @@ header .container {
   justify-content: center;
 }
 
+.showcase-area .cta{
+  display: grid;
+  width: fit-content;
+}
+.showcase-area a {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: var(--lightOne);
+  transition: .5s;
+}
+.showcase-area a i{
+  vertical-align: middle;
+}
+.showcase-area a:hover {
+  color: var(--mainColor);
+  transition: .5s;
+}
+
 .big-title {
   font-size: 1.4rem;
   color: var(--darkOne);
@@ -214,7 +217,7 @@ header .container {
   color: var(--lightOne);
   font-size: 1.1rem;
   margin: 1.9rem 0 2.5rem;
-  max-width: 600px;
+  max-width: 500px;
   line-height: 2.3;
 }
 
@@ -222,9 +225,22 @@ header .container {
   box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.05);
 }
 
-.page-image {
-  width: 123%;
-  transform: translate(15%, 25px);
+iframe{
+  width: 100%;
+  height: 450px;
+  margin-left: 25px;
+  border: 0px;
+  border-radius: 10px;
+}
+.page-image{
+  width: 100%;
+  margin-left: 25px;
+}
+.page-image-brand{
+  width: 100%;
+  margin-left: 25px;
+  border-radius: 50%;
+  border: 5px solid var(--mainColor);
 }
 
 .shape {
@@ -234,23 +250,6 @@ header .container {
   bottom: -180px;
   left: -15px;
   opacity: 0.1;
-}
-
-.copy {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  animation: appear 1s 1 both;
-}
-
-@keyframes appear {
-  0% {
-    clip-path: circle(30% at -25% -25%);
-  }
-  100% {
-    clip-path: circle(150% at 0 0);
-  }
 }
 
 @media screen and (max-width: 870px) {
@@ -325,16 +324,27 @@ header .container {
 
   .big-title {
     font-size: 1.1rem;
+    text-align: center;
   }
 
   .text {
+    max-width: none;
+    width: 100%;
     font-size: 0.95rem;
     margin: 1.4rem 0 1.5rem;
+    text-align: center;
   }
 
+  .container .social-icon{
+    font-size: 1.1rem;
+  }
   .page-image {
     width: 100%;
-    transform: none;
+    margin-left: 0;
+  }
+  .page-image-brand{
+    width: 100%;
+    margin-left: 0;
   }
 
   .logo h3 {
@@ -344,6 +354,16 @@ header .container {
   .shape {
     bottom: -180px;
     left: -150px;
+  }
+
+  iframe{
+    width:100%;
+    margin-left: 0;
+  }
+
+  .showcase-area .cta{
+    width: 100%;
+    justify-content: center;
   }
 }
 
